@@ -1,0 +1,16 @@
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;  
+}
+.galeria img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.titulo{
+    text-align: center;
+    padding: 20px;
+    font-size: 3vw;
+}

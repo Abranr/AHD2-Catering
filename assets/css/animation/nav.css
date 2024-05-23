@@ -1,0 +1,30 @@
+.container a {
+    padding: 10px 3px;
+    position: relative;
+  }
+  
+  /* PulL up and down */
+  .animation a:before, .animation a:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+  }
+  
+  .animation a:before {
+    top: 0px;
+  }
+  
+  .animation a:after {
+    bottom: 0px;
+  }
+  
+  .animation a:hover:before, .animation a:hover:after {
+    height: 100%;
+  }
+  
+ 

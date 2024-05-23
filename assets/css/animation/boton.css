@@ -1,0 +1,76 @@
+.btn {
+ --color: #609b15;
+ padding: 0.8em 1.7em;
+background-color: transparent;
+border-radius: 2.3em;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+transition: .5s;
+font-weight: 400;
+font-size: 17px;
+border: 1px solid;
+font-family: inherit;
+text-transform: uppercase;
+color: rgb(97, 154, 12);
+z-index: 1;
+}
+
+.btn::before, .btn::after {
+content: '';
+display: block;
+width: 50px;
+height: 50px;
+transform: translate(-50%, -50%);
+position: absolute;
+border-radius: 50%;
+z-index: -1;
+background-color: var( --color);
+transition: 1s ease;
+}
+
+.btn::before {
+top: -1em;
+left: -1em;
+}
+
+.btn::after {
+left: calc(100% + 1em);
+top: calc(100% + 1em);
+}
+
+.btn:hover::before, .btn:hover::after{
+height: 410px;
+width: 410px;
+}
+
+.btn:hover {
+color: rgb(255, 255, 255);
+}
+
+.btn:active{
+filter: brightness(.8);
+}
+.container-btn{
+    display: flex;
+    justify-content: center;
+}
+.nuestro-menu, .nuestro-servicio, .galeria-evento{
+    padding-top: 60px;
+}
+.galeria-evento, .container-btn, .btn > .btn{
+    margin-top: 15px;
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .btn {
+     padding: 0.4em 1.4em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .btn{
+padding: 0.2em 1.2em;
+
+ 
+    }
+}

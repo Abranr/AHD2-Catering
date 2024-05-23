@@ -1,0 +1,48 @@
+#list {
+    counter-reset: li; 
+    list-style: none; 
+    padding: 0;
+    margin-bottom: 4em;
+}
+
+#list ul {
+    margin: 0 0 0 2em; 
+}
+
+#list li {
+    position: relative;
+    display: block;
+    padding: 0.4em 0.4em 0.4em 2em;
+    margin: 0.5em 0;
+    background: #b9ea6c;
+    color: #192c07;
+    text-decoration: none;
+    border-radius: 0.3em;
+    transition: all 0.3s ease-out;
+  }
+
+#list li:hover{
+    background: #eaf9ce;
+}
+
+#list li:hover:before{
+    transform: rotate(360deg);  
+}
+
+#list li:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #609b15;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
